@@ -1,3 +1,4 @@
+/*
 const initialState = {
   counter: 10
 }
@@ -20,7 +21,7 @@ const rootReducer = (state = initialState, action) => {
       return state
   }
 
-  /*if (action.type === 'ADD') {
+  /!*if (action.type === 'ADD') {
     return {
       counter: state.counter + 1
     }
@@ -30,8 +31,17 @@ const rootReducer = (state = initialState, action) => {
     return {
       counter: state.counter - 1
     }
-  }*/
+  }*!/
 
 }
 
 export default rootReducer
+*/
+
+import {combineReducers} from 'redux'
+import counter1 from "./reducers/counter1";
+import counter2 from "./reducers/counter2";
+
+export default combineReducers({
+  counter1, counter2
+})
