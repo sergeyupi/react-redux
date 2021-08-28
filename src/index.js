@@ -7,6 +7,7 @@ import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import reduxThunk from 'redux-thunk'
 import rootReducer from "./redux/rootReducer";
+import Hooks from "./Hooks";
 
 function loggerMiddleware(store) {
   return function (next) {
@@ -26,5 +27,7 @@ const app = (
   </Provider>
 )
 
-ReactDOM.render(app, document.getElementById('root'));
+const hooks = (<Hooks/>)
+
+ReactDOM.render(hooks, document.getElementById('root'));
 registerServiceWorker();
